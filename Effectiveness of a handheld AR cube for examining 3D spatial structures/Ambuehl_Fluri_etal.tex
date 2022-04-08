@@ -49,8 +49,8 @@
 %% the commands and values with those provided to you when you
 %% complete the rights form.
 \setcopyright{acmcopyright}
-\copyrightyear{2021}
-\acmYear{2021}
+\copyrightyear{2022}
+\acmYear{2022}
 \acmDOI{XXXXXXX.XXXXXXX}
 
 
@@ -64,7 +64,7 @@
 \newcommand\todo[1]{\hlc[pink]{\textbf{TODO: #1}}} 
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[ACM CHI '22]{Human Factors in Computing Systems (CHI) of the Association for Computing Machinery}{April 30 -- May 05,
+\acmConference[ACM SIGCHI '22]{SpaceCHI 2.0 Workshop at ACM SIGCHI 2022}{April 30 -- May 05,
   2022}{New Orleans, LA}
 %%\acmPrice{15.00}
 %%\acmISBN{978-1-4503-XXXX-X/18/06}
@@ -121,7 +121,7 @@
 
 \author{Catherine Zucker}
 \affiliation{%
-  \institution{Center for Astrophysics, University of Harvard}
+  \institution{Center for Astrophysics, Harvard University}
   \streetaddress{}
   \city{}
   \country{USA}}
@@ -129,7 +129,7 @@
 
 \author{Alyssa Goodman}
 \affiliation{%
-  \institution{Center for Astrophysics, University of Harvard}
+  \institution{Center for Astrophysics, Harvard University}
   \streetaddress{}
   \city{}
   \country{USA}}
@@ -161,7 +161,7 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  In this work-in-progress study, we examine the use of a handheld augmented reality (AR) cube solution that we developed for the scientific exploration of astronomy data. Our primary purpose in this study is to examine if the AR solution might be a competitive alternative to a desktop 3D visualization with more familiar mouse-keyboard interactions. In relation to a known tension between objective performance and subjective opinion, we purposefully designed traditional information visualization tasks for which we expected that AR solution might fail whereas participants might still like the solution. An additional key consideration in the study is examining participants' ability to use the handheld cube in relation to their mental rotation abilities, as the handheld cube requires rotating the AR visualization to solve the tasks we designed. As expected, our initial results based on a preliminary user experiment (n=16) show that indeed participants do better with the desktop 3D by objective measures, yet nevertheless, all of them believe that the AR solution has potential for scientific exploration.  We argue that the discrepancy between performance metrics and intuition of our participants is explained by task type, possibly by lack of familiarity with the interaction type to a degree, rather than visualization type, which we plan to test in the next steps. Furthermore, participants with higher mental rotation abilities commit fewer errors with the AR solution, suggesting that individual differences might be important to consider in future work.
+  In this work-in-progress study, we examine the use of a handheld augmented reality (AR) cube solution that we developed for the scientific exploration of astronomy data. Our primary purpose in this study is to examine if the AR solution might be a competitive alternative to a desktop 3D visualization with more familiar mouse-keyboard interactions. In relation to a known tension between objective performance and subjective opinion, we purposefully designed traditional information visualization tasks for which we expected that AR solution might fail whereas participants might still like the solution. An additional key consideration in the study is examining participants' ability to use the handheld cube in relation to their mental rotation abilities, as the handheld cube literally requires rotating the AR visualization to solve the tasks we designed. As expected, our results based on a preliminary user experiment (n=16) show that participants on average do better with the desktop 3D by objective measures, yet nevertheless, strikingly all participants believe that the AR solution has potential for scientific exploration.  We argue that the discrepancy between performance metrics and intuition of our participants is explained by task type, possibly by lack of familiarity with the interaction type to a degree, rather than visualization type, which we plan to test in the next steps. Furthermore, participants with higher mental rotation abilities commit fewer errors with the AR solution, suggesting that individual differences might be important to consider in future work.
 \end{abstract}
 
 %%
@@ -212,25 +212,25 @@
 \maketitle
 
 \section{Introduction}
-In information visualization, the unnecessary use of 3D graphics has been long discouraged for good reasons \cite{borkin_evaluation_2011}\cite{schnurer2020empirical}. However, previous studies show that there is merit in using stereo 3D in scientific visualization contexts that require spatial sense-making \cite{mcintire2014stereoscopic}. This might be especially true when the depth information is necessary to infer spatial structures, and data does not afford rendering other depth cues, which is the case with many space observations where the observed matter is dust or gas. Dust, gas or similar matter often cannot be easily represented by monoscopic depth cues such as perspective, occlusion, shading, color, or familiar size. Given the unknown nature of the phenomena and the lack of monoscopic depth cues, stereopsis offers important information which should not be neglected. 3D viewing for exploration can lead to important discoveries, e.g., in mapping gas waves or detecting the conditions in which stars are formed \cite{alves_galactic-scale_2020}\cite{zucker_star_2022}.\\ 
+In information visualization, the unnecessary use of 3D graphics has been long discouraged for good reasons \cite{borkin_evaluation_2011}\cite{schnurer2020empirical}. However, previous studies show that there is merit in using 3D in scientific visualization contexts that require spatial sense-making, especially stereo 3D \cite{mcintire2014stereoscopic}. Dust, gas or similar matter often found in space observations cannot be easily represented by monoscopic depth cues such as perspective, occlusion, shading, color, or familiar size. Given the unknown nature of the phenomena and the lack of monoscopic depth cues, stereopsis offers important information  binocular displays or  utilization of motion parallax (i.e., wiggle stereoscopy). In general, viewing the phenomenon from multiple perspective is a good principle, and 3D viewing for exploration can lead to important discoveries, e.g., in mapping gas waves or detecting the conditions in which stars are formed \cite{alves_galactic-scale_2020}\cite{zucker_star_2022}.\\ 
 
 \section{Implementation of the Glue AR cube}
 
-Motivated by the previous work summarized above, in this pilot study, we prototype and user-test a solution in the form of an AR Python plugin for the open-source visualization software Glue\footnote{\url{https://glueviz.org}} which has been originally developed for astronomy research but later extended to broader use in any scientific visualization context \cite{beaumontHackableUserInterfaces2015} (Figure \ref{fig:glue-interface}). 
+Motivated by the previous work summarized above, in this pilot study, we prototype and user-test a 3D visualization solution in the form of an augmented reality (AR) Python plugin for the open-source software Glue\footnote{\url{https://glueviz.org}}. Glue has been originally developed for astronomy research and was later extended for broader use in any scientific visualization context \cite{beaumontHackableUserInterfaces2015} (Figure \ref{fig:glue-interface}). 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=12cm]{Picture1.png}
-  \caption{Glue interface (left) desktop version (top right), and the MergeCube AR display (bottom right).}
+  \caption{Plugin interface (left), glue desktop version (top right) and the MergeCube AR display (bottom right).}
   \label{fig:glue-interface}
   %\Description{A woman and a girl in white dresses sit in an open car.}
 \end{figure}
 
-Our implementation enables viewing 3D data from Glue in augmented reality (AR) utilizing a third-party service called CoSpaces\footnote{\url{https://edu.cospaces.io}} and associated API for uploading 3D models and creating AR rooms that can be opened on the CoSpaces mobile app. The end result is displayed using a handheld cube called MergeCube\footnote{\url{https://mergeedu.com/cube}}, which can be purchased, or self-made using paper. Figure \ref{fig:glue-interface} (left and top right) illustrate the Glue extension interface and the desktop version of the application, whereas Figure \ref{fig:glue-interface} (bottom right) illustrates the smartphone-based handheld MergeCube display as the user would experience it. 
+Our implementation enables viewing 3D data from Glue in AR utilizing a third-party service called CoSpaces\footnote{\url{https://edu.cospaces.io}} and associated API for uploading 3D models and creating AR rooms that can be opened on the CoSpaces mobile app. The end result is displayed using a handheld cube called MergeCube\footnote{\url{https://mergeedu.com/cube}}, which can be purchased, or self-made using paper. A handheld cube enables smaller or larger rotations of the viewed scene, facilitating a novel form of a 3D experience including a tangible/tactile sensation. Figure \ref{fig:glue-interface} (left and top right) illustrate the Glue extension interface and the desktop version of the application, whereas Figure \ref{fig:glue-interface} (bottom right) illustrates the smartphone-based handheld MergeCube display as the user would experience it. 
 
 
 \section{Experiment}
-In a pilot experiment with 16 participants (age range 20-49, 10 men) who were students or researchers in computer science or astronomy domains but had little or no expertise in AR, we compared the baseline desktop solution and our AR cube solution. At this stage of the study, we examined the AR vs. desktop 3D solution for tasks that were designed for information extraction following standard task taxonomies found in information visualization such as to identify, compare, associate, locate and categorize the displayed elements (e.g., \cite{knappTaskAnalysisApproach1995}). We expected that participants would do worse with the AR solution because of the lack of familiarity with the type of interaction, as well as the previous studies demonstrating that 3D can be harder to work with due to issues such as occlusion, i.e., 'hidden information', forcing viewers to make inferences based on what they remember \cite{borkin_evaluation_2011}\cite{bachHologramMyHand2018}. However, we also expected that participants would have a positive opinion on the AR solution's use and/or usefulness, because it has been previously demonstrated that people may exhibit a strong preference for 3D and realism \cite{smallman_naive_2011}\cite{lokka2018virtual}.
+In a pilot experiment with 16 participants (age range 20-49, 10 men) who were students or researchers in computer science or astronomy domains but had little or no expertise in AR, we compared the baseline desktop solution and our AR cube solution. At this stage of the study, we examined the AR vs. desktop 3D solution for ten tasks that were designed for information extraction following standard task taxonomies found in information visualization such as to identify, compare, associate, locate and categorize the displayed elements (e.g., \cite{knappTaskAnalysisApproach1995}). For example, participants were asked to identify the color of the largest object, the number of clusters, how many objects differed in their orientation compared to the majority of objects. We expected that participants would do worse with the AR solution because of the lack of familiarity with the type of interaction, as well as the previous studies demonstrating that 3D can be harder to work with due to issues such as occlusion, i.e., 'hidden information', forcing viewers to make inferences based on what they remember \cite{borkin_evaluation_2011}\cite{bachHologramMyHand2018}. However, we also expected that participants would have a positive opinion on the AR solution's use and/or usefulness, because it has been previously demonstrated that people may exhibit a strong preference for 3D and realism \cite{smallman_naive_2011}\cite{lokka2018virtual}.
 
 \section{Results and Discussion}
 As expected, participants performed considerably better with the desktop version in terms of response speed and response accuracy: Specifically, they committed more than twice as many errors with the AR solution and were nearly twice as slow as the desktop solution (Table \ref{tab:freq}).
@@ -263,7 +263,7 @@ Additionally, we measured our participants' mental rotation abilities due to the
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=12cm]{Picture2.png}
+  \includegraphics[width=10cm]{Picture2.png}
   \caption{Participants with higher MRT scores appear to perform considerably better with the handheld AR cube whereas the differences for the desktop version are not as pronounced. Linear regression line AR: Slope: -0.074, Pearson R: -0.415, Linear regression line desktop: Slope: -0.020, Pearson R: -0.155.}
   \label{fig:mrt}
   %\Description{A woman and a girl in white dresses sit in an open car.}
